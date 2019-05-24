@@ -1,6 +1,9 @@
 package com.pack.dao;
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
@@ -11,9 +14,6 @@ public class CustomerDoaImpl implements CustomerDao {
 	private static Logger logger=Logger.getLogger(CustomerDoaImpl.class);
 	
 	private SessionFactory sessionFactory;
-	
-	
-
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
@@ -27,8 +27,35 @@ public class CustomerDoaImpl implements CustomerDao {
 
 	@Override
 	public void updateCustomer(Customer customer) {
-		// TODO Auto-generated method stub
+		sessionFactory.getCurrentSession().update(customer);
 
+	}
+
+	@Override
+	public List<Customer> listCustomer() {
+		
+		//List<Customer> list=null;
+		Query query=sessionFactory.getCurrentSession().createQuery("from Customer");
+		List list=query.list();
+		return list;
+	}
+
+	@Override
+	public Customer getCustomerById(Integer cid) {
+		Query q=sessionFactory.getCurrentSession().createQuery("from Customer c where c.id=:id");
+		q.setParameter("id", cid);
+		Customer c=(Customer)q.uniqueResult();
+		return c;
+	}
+
+	@Override
+	public void removeCustomer(Integer cid) {
+		Customer c=(Customer)sessionFactory.getCurrentSession().get(Customer.class, cid);
+		if(c!=null) 
+		{
+			sessionFactory.getCurrentSession().delete(c);
+		}
+		
 	}
 
 }

@@ -6,6 +6,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<script>
+	function deleteCustomer(customerId)
+	{
+		if(confirm('do you want to delete this customer?'))
+		{
+			var url='delete/'+customerId;
+			window.location.href=url;
+		}
+	}
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Customer jsp</title>
 <style type="text/css">
@@ -128,6 +138,39 @@
 
 
 </form:form>
+
+<hr>
+
+<c:if test="${!empty customerList}">
+<h3>List of customer</h3>
+	<table class="customerTable">
+		<tr>
+			<th width="180">Customer Name</th>
+			<th width="160">Address</th>
+			<th width="60">Age</th>
+			<th width="80">Salery</th>
+			<th width="60">Action</th>
+		</tr>
+		<c:forEach items="${customerList}" var="customer">
+			<tr>
+				
+				<td><a href="<c:url value='/edit/${customer.id }' />" >${customer.name}</a></td>
+				<td>${customer.address}</td>
+				<td>${customer.age}</td>
+				<td>${customer.salery}</td>
+				<td><img src="<c:url value='/images/vcard_delete.png'/>"
+					title="DeleteCustomer"
+					onclick="javascript:deleteCustomer(${customer.id})"/>
+					<a href="<c:url value='edit/${customer.id}'/>">
+						<img src="<c:url value='/images/vcard_edit.png'/>">
+					</a>
+				 </td> 
+ 		</tr>
+		
+		</c:forEach>
+	</table>
+
+</c:if>
 
 	
 
