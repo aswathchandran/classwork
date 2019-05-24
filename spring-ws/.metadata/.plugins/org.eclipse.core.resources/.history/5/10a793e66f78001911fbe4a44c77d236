@@ -1,0 +1,7 @@
+package com.pack;
+
+public class HelloWorld {
+	
+	private String message;
+
+}

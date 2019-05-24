@@ -1,0 +1,75 @@
+package com.pack.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+import java.util.Random;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.pack.model.Customer;
+import com.pack.service.CustomerServiceImpl;
+
+/**
+ * Servlet implementation class CustomerController
+ */
+
+public class CustomerController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public CustomerController() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.setContentType("text/html");
+		PrintWriter pw=response.getWriter();
+		CustomerServiceImpl customerService=new CustomerServiceImpl();
+		
+		String customer_name=request.getParameter("customer_name");
+		String Salery=request.getParameter("salery");
+		float salery=Float.parseFloat(Salery);
+		String address=request.getParameter("address");
+		String city=request.getParameter("city");
+		Random r=new Random();
+		int customer_id=r.nextInt(90000)+100000;	
+		
+		
+		Customer customer=new Customer(customer_id,customer_name,address,city,salery);
+		
+		int i=customerService.insertCustomer(customer);	
+		if(i==1) 
+		{
+			pw.println("Row inserted sucessful;ly");
+			List<Customer> customerList=new CustomerServiceImpl().fetchCustomers();
+			request.setAttribute("custList",customerList );
+			RequestDispatcher rd=request.getRequestDispatcher("/index.jsp");
+			rd.forward(request, response);				
+		}
+		
+		
+		//doGet(request, response);
+	}
+
+}

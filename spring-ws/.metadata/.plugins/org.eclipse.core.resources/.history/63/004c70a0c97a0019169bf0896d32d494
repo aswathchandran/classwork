@@ -1,0 +1,11 @@
+package com.pack.model;
+
+public class User {
+	
+	
+	private String password,gendermcountry,aboutYou;
+	private String[] community;
+	private Boolean mailingList;
+	
+
+}

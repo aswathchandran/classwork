@@ -1,0 +1,15 @@
+package com.aswath.model;
+
+public class VendorModel {
+	
+	
+	private int id;
+	private String username;
+	private String Contact;
+	private String Address;
+	
+	public VendorModel() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

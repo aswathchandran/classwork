@@ -1,0 +1,9 @@
+package com.pack;
+
+
+public class Category {
+	
+	private int catid;
+	private String name;
+
+}

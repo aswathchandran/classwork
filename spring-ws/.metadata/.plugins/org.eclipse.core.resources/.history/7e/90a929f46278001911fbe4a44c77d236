@@ -1,0 +1,15 @@
+package com.pack;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+
+public class InjectCollection {
+	
+	private List name1;
+	private Set name2;
+	private Map name3;
+	private Properties name4;
+
+}

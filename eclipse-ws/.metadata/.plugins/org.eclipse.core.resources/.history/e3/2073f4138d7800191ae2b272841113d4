@@ -1,0 +1,5 @@
+package com.aswath.model;
+
+public class InventoryModel {
+
+}

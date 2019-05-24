@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="grizzly-store-vendor-web-practice-check">
+        <property name="context-root" value="grizzly-store-vendor-web-practice-check"/>
+        <property name="java-output-path" value="/grizzly-store-vendor-web-practice-check/build/classes"/>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,21 @@
+package com.pack;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class FirstBean {
+		
+		@Autowired
+		private SecondBean secondBean;
+		public FirstBean() {
+			// 
+			System.out.println("first bean object");
+		}
+		
+		public void check() 
+		{
+			secondBean.check1();
+		}
+		
+
+		
+}

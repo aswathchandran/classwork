@@ -1,0 +1,31 @@
+package com.pack;
+
+import javax.transaction.Transaction;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class Main {
+
+	public static void main(String[] args) {
+		SessionFactory factory=new Configuration().configure().buildSessionFactory();
+		Session session=factory.openSession();
+		Transaction t=session.beginTransaction();
+		
+		Category c1=new Category();
+		c1.setCatid(100);
+		c1.setName("A");
+		
+		Category c2=new Category();
+		c2.setCatid(101);
+		c2.setName("B");
+		
+		
+		Items i1=new Items();
+		i1.setItemid(200);
+		i1.setItemname("x");
+
+	}
+
+}

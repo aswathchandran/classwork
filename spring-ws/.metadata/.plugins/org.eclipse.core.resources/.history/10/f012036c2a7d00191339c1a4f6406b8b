@@ -1,0 +1,9 @@
+label.customerId=Customer ID
+label.customername=Customer Name
+label.address=Address
+label.age=Age
+label.salery=Salery
+label.addcustomer=Add Customer
+label.editcustomer=Edit Customer
+
+Size.customer.name= Customer {0} should be between {2} and {1} characters long

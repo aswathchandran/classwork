@@ -1,0 +1,26 @@
+package com.pack2.quallifier;
+
+public class Sample {
+
+	private User user;
+	
+	public Sample() {
+		System.out.println("Sample default");
+	}
+	
+	
+	
+	public void display() 
+	{
+		System.out.println(user.getName());
+	}
+	
+	public void display1() 
+	{
+		System.out.println(user.getAge());
+	}
+
+
+
+
+}

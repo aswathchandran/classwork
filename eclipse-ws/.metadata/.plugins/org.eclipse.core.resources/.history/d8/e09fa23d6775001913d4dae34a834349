@@ -1,0 +1,100 @@
+package com.aswath.Dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.List;
+
+import com.aswath.JdbcConnection;
+import com.aswath.model.LoginModel;
+import com.aswath.model.UserModel;
+
+public class LoginDaoImpl implements LoginDao {
+
+	@Override
+	public int Login(LoginModel loginModel) {
+		
+		
+		
+		Connection con=null;
+		int i=0;
+		try 
+		{
+			con=JdbcConnection.getConnection();
+			System.out.println("con->>"+con);
+			PreparedStatement ps= con.prepareStatement("select username from admin where username=? and password=?" );
+			System.out.println(loginModel.getUsername());
+			System.out.println(loginModel.getPassword());
+			ps.setString(1,loginModel.getUsername());
+			ps.setString(2,loginModel.getPassword());
+			ResultSet rs=ps.executeQuery();
+			while(rs.next())
+			{
+				i++;				
+			}
+			System.out.println(i);
+		}
+		catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		finally 
+		{
+			try 
+			{
+				con.close();
+				System.out.println("the Connection closed sucessfully");
+			}
+			catch (Exception e) {
+				System.out.println(e);
+			}
+		}
+		
+		return i;
+	}
+
+	@Override
+	public UserModel FetchUser(String username) {
+		
+		Connection con=null;
+		
+		UserModel userModel;
+		try 
+		{
+			con=JdbcConnection.getConnection();
+			PreparedStatement ps=con.prepareStatement("Select userid,username,destignition,office,imagesrc from admin where usernam=?");
+			ps.setString(1, username);
+			ResultSet rs=ps.executeQuery();
+			
+			while(rs.next()) 
+			{
+				userModel=new UserModel();
+				userModel.setUserid(rs.getInt(1));
+				userModel.setUsername(rs.getString(2));
+				
+			}
+			
+			
+			
+		}
+		catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		finally 
+		{
+			try 
+			{
+				con.close();
+				System.out.println("the Connection closed sucessfully");
+			}
+			catch (Exception e) {
+				System.out.println(e);
+			}
+		}
+		
+		
+		return null;
+	}
+
+}

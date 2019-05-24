@@ -1,0 +1,8 @@
+package com.pack;
+
+public class ContractEmployee {
+	
+	private float pay_hour;
+	private String contract_duration;
+	
+}

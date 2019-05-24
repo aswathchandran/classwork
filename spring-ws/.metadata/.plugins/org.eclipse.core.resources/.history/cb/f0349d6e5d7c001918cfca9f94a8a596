@@ -1,0 +1,12 @@
+package com.pack;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="address")
+public class Address {
+
+	private int addressId;
+	private String place;
+}

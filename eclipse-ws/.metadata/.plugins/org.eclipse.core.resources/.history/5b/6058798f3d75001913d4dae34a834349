@@ -1,0 +1,5 @@
+package com.aswath.Dao;
+
+public interface LoginDao {
+
+}

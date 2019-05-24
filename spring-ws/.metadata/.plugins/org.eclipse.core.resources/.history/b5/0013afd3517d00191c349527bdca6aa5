@@ -1,0 +1,27 @@
+package com.pack.service;
+
+import org.apache.log4j.Logger;
+import org.springframework.stereotype.Service;
+
+import com.pack.form.Customer;
+@Service
+public class CustomerServiceImpl implements CustomerService {
+	private static Logger logger=Logger.getLogger(CustomerServiceImpl.class);
+	
+	
+	@Override
+	public void addCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+		logger.info("inside service add customer");
+		
+		customerDao.addCustomer(customer);
+	}
+
+	@Override
+	public void updateCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+		logger.info("inside service update customer");
+
+	}
+
+}

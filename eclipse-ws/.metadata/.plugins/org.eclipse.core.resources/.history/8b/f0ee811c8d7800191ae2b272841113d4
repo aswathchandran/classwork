@@ -1,0 +1,10 @@
+package com.aswath.model;
+
+public class InventoryModel {
+	private String productname;
+	private int availablity;
+	private int required;
+	private float price;
+	private float rating;
+
+}

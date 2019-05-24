@@ -1,0 +1,6 @@
+0    [main] ERROR com.pack.Main2  - error
+1    [main] FATAL com.pack.Main2  - fatel
+1    [main] WARN  com.pack.Main2  - warn
+0    [main] ERROR com.pack.Main2  - error
+1    [main] FATAL com.pack.Main2  - fatel
+1    [main] WARN  com.pack.Main2  - warn

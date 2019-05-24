@@ -1,0 +1,10 @@
+package com.aswath.Dao;
+
+import com.aswath.model.LoginModel;
+
+public interface LoginDao {
+	
+	
+	public int Login(LoginModel loginmodel);
+
+}

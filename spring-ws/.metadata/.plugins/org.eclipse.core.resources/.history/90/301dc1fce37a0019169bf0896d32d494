@@ -1,0 +1,27 @@
+package com.pack.model;
+
+import java.util.Date;
+
+public class Customer {
+	
+	private String name;
+	
+	private String email;
+	
+	private int age;
+	
+	public enum Gender
+	{
+		MALE,FEMALE
+	}
+	
+	private Gender gender;
+	
+	
+	private Date birthday;
+	
+	private String phone;
+	
+	
+	
+}

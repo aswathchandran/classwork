@@ -1,0 +1,19 @@
+package com.pack.service;
+
+import com.pack.form.Customer;
+
+public class CustomerServiceImpl implements CustomerService {
+
+	@Override
+	public void addCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void updateCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.aswath.dao;
+
+import java.util.List;
+
+import com.aswath.model.ProductModel;
+
+public class ProductDaoImpl implements ProductDao {
+
+	@Override
+	public List<ProductModel> fetchAllProduct() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

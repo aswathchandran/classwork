@@ -1,0 +1,12 @@
+package com.pack;
+
+public class Sample {
+
+	
+	
+	String Message;
+	
+	
+	
+	
+}

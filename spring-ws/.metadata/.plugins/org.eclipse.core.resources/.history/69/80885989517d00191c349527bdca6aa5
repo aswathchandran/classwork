@@ -1,0 +1,23 @@
+package com.pack.dao;
+
+import org.apache.log4j.Logger;
+
+import com.pack.form.Customer;
+
+
+public class CustomerDoaImpl implements CustomerDao {
+	private static Logger logger=Logger.getLogger(CustomerDoaImpl.class);
+	@Override
+	public void addCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+		logger.info("inside dao add customer");
+
+	}
+
+	@Override
+	public void updateCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

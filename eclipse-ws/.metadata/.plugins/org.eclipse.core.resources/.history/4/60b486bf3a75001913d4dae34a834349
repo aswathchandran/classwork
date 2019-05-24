@@ -1,0 +1,5 @@
+package com.aswath.controller;
+
+public class LoginController {
+
+}

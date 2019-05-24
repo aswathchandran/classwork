@@ -1,0 +1,21 @@
+package com.pack.service;
+
+import org.springframework.stereotype.Service;
+
+import com.pack.form.Customer;
+@Service
+public class CustomerServiceImpl implements CustomerService {
+
+	@Override
+	public void addCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void updateCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

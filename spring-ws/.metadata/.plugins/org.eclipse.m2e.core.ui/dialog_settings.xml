@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="FinalProject"/>
+			<item value="logging"/>
+			<item value="manytomany"/>
+			<item value="onetomany"/>
+			<item value="HibernteMappings"/>
+			<item value="Hibernate1"/>
+		</list>
+		<list key="name">
+			<item value="FinalProject"/>
+			<item value="logging"/>
+			<item value="manytomany"/>
+			<item value="onetomany"/>
+			<item value="HibernteMappings"/>
+			<item value="Hibernate1"/>
+		</list>
+		<list key="artifactId">
+			<item value="FinalProject"/>
+			<item value="logging"/>
+			<item value="manytomany"/>
+			<item value="onetomany"/>
+			<item value="HibernteMappings"/>
+			<item value="Hibernate1"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item value="All Catalogs" key="catalog"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\765697\Desktop\aswath-ws\spring-ws\Hibernate2\src\main\java\com\pack\dao\CustomerDaoImpl.java"/>
+			<item value="C:\Users\765697\Desktop\aswath-ws\spring-ws\HibernateInheritanceOne6\src\main\java\com\pack\Main.java"/>
+			<item value="C:\Users\765697\Desktop\aswath-ws\spring-ws\SpringMVC3\pom.xml"/>
+			<item value="C:\Users\765697\Desktop\aswath-ws\spring-ws\SpringMVC3"/>
+			<item value="C:\Users\765697\Desktop\aswath-ws\spring-ws\SampleSpring11\src\main\java\beans3.xml"/>
+			<item value="C:\Users\765697\Desktop\aswath-ws\spring-ws\SampleSpring14\pom.xml"/>
+			<item value="C:\Users\765697\Desktop\aswath-ws\spring-ws\SpringSession1\src\main\java\beans.xml"/>
+			<item value="C:\Users\765697\Desktop\aswath-ws\spring-ws\SampleSpring3\src\main\java\com\pack\Main.java"/>
+			<item value="C:\Users\765697\Desktop\aswath-ws\spring-ws\SampleSpring1\src\com\pack\Main.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

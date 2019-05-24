@@ -1,0 +1,24 @@
+package com.pack.model;
+
+
+public class Customer {
+	
+	private String name;
+	
+	private String email;
+	
+	private int age;
+	
+	public enum Gender
+	{
+		MALE,FEMALE
+	}
+	
+	private Gender gender;
+	
+	
+	private Date 
+	
+	
+	
+}

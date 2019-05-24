@@ -1,0 +1,34 @@
+package com.aswath.model;
+
+public class UserModel {
+
+	private int userid;
+	private String username;
+	private String destignition;
+	private String office;
+	private String imagesrc;
+	
+	
+	public UserModel() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	public UserModel(int userid, String username, String destignition, String office, String imagesrc) {
+		super();
+		this.userid = userid;
+		this.username = username;
+		this.destignition = destignition;
+		this.office = office;
+		this.imagesrc = imagesrc;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

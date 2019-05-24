@@ -1,0 +1,7 @@
+package com.pack.service;
+
+import com.pack.model.Customer;
+
+public interface CustomerService {
+	public static int insertCustomer(Customer customer);
+}

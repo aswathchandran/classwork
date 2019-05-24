@@ -1,0 +1,17 @@
+package com.pack.dao;
+
+import java.util.List;
+
+import org.w3c.dom.ls.LSInput;
+
+import com.pack.model.Customer;
+
+public interface CustomerDao {
+	public  void insertCustomer(Customer customer);
+	
+	public void upadteCustomer(Customer customer);
+	
+	public void deleteCustomer(int custid);
+	
+	public List<Customer> fetchCustomerID(int custid);
+}

@@ -1,0 +1,24 @@
+package com.aswath.service;
+
+import com.aswath.dao.VendorDaoImpl;
+import com.aswath.model.VendorModel;
+
+public class VendorServiceImpl implements VendorService {
+
+	@Override
+	public int LoginService(VendorModel vendor) {
+		
+		return new VendorDaoImpl().login(vendor);
+	}
+
+	@Override
+	public VendorModel fetchVendor(String username) {
+		
+		return new VendorDaoImpl().fetchVendor(username);
+	}
+	
+	
+	
+	
+
+}

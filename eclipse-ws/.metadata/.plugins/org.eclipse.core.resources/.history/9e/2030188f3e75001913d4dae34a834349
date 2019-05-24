@@ -1,0 +1,20 @@
+package com.aswath.Dao;
+
+import java.sql.Connection;
+
+import com.aswath.model.LoginModel;
+
+public class LoginDaoImpl implements LoginDao {
+
+	@Override
+	public int Login(LoginModel loginModel) {
+		
+		
+		
+		Connection con=null;
+		int i=0;
+		
+		return 0;
+	}
+
+}

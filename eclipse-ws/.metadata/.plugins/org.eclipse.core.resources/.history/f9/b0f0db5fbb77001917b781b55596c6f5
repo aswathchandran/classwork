@@ -1,0 +1,5 @@
+package com.aswath.dao;
+
+public interface VendorDao {
+
+}

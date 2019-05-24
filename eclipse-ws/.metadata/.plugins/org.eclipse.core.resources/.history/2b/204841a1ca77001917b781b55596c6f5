@@ -1,0 +1,80 @@
+package com.aswath.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.aswath.model.VendorModel;
+
+import com.aswath.service.VendorService;
+import com.aswath.service.VendorServiceImpl;
+
+/**
+ * Servlet implementation class LoginController
+ */
+@WebServlet("/LoginController")
+public class LoginController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private VendorServiceImpl vendorService;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public LoginController() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		response.setContentType("text/html");
+		PrintWriter pw=response.getWriter();
+		VendorModel vendor=null;
+		VendorModel vendorModel=null;
+		String username=request.getParameter("username");
+		String password=request.getParameter("password");
+		
+		vendor=new VendorModel(username,password);
+		
+		int i=new VendorServiceImpl().LoginService(vendor);
+		HttpServlet session=request.getSession();
+		if(i==1) 
+		{
+			((ServletRequest) session).setAttribute("username",username);
+			try 
+			{
+					
+			}
+			catch(Exception e)
+			{
+				System.out.println(e);
+			}
+			
+			
+			
+		}
+		
+		
+		
+		pw.close();
+		//doGet(request, response);
+	}
+
+}

@@ -1,0 +1,163 @@
+package com.pack.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.mysql.jdbc.Statement;
+import com.pack.JdbcConnection;
+import com.pack.model.Customer;
+
+public class CustomerDaoImpl implements CustomerDao {
+
+	@Override
+	public int insertCustomer(Customer customer) {
+		Connection con=null;
+		int i=0;
+		
+		try 
+		{
+			con=JdbcConnection.getConnection();
+			PreparedStatement ps=con.prepareStatement("insert into customer values(?,?,?,?,?)");
+			ps.setInt(1, customer.getCustomer_id());
+			ps.setString(2, customer.getCustomer_name());
+			ps.setString(3, customer.getAddress());
+			ps.setFloat(4, customer.getSalery());
+			ps.setString(5, customer.getCity());
+			i=ps.executeUpdate();
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e);
+		}
+		finally {
+			try {
+				if(con!=null)  
+				{
+					con.close();
+				}
+				System.out.println("closed sucessfully");
+			}
+			catch (Exception e2) {
+				System.out.println(e2);
+			}
+		}
+		
+		return i;
+	}
+
+	@Override
+	public List<Customer> fetchCustomers() {
+		Connection con=null;
+		List<Customer> customers=new ArrayList<>();
+		try 
+		{
+			con=JdbcConnection.getConnection();
+			java.sql.Statement st=con.createStatement();
+			ResultSet rs=st.executeQuery("select customer_id,customer_name,address,salery,city from customer");
+
+			while(rs.next()) 
+			{
+				Customer Temp_customer=new Customer();
+				Temp_customer.setCustomer_id(rs.getInt(1));
+				Temp_customer.setCustomer_name(rs.getString(2));
+				Temp_customer.setAddress(rs.getString(3));
+				Temp_customer.setSalery(rs.getFloat(4));
+				Temp_customer.setCity(rs.getString(5));
+				customers.add(Temp_customer);
+			}
+		}
+		
+		catch (Exception e) {
+			System.out.println(e);
+		}
+		finally {
+			try {
+				if(con!=null)  
+				{
+					con.close();
+				}
+				System.out.println("closed sucessfully");
+			}
+			catch (Exception e2) {
+				System.out.println(e2);
+			}
+		}
+		
+		return customers;
+	}
+
+	@Override
+	public Customer fetchCustomer(int customer_id) {
+		Connection con=null;
+		Customer c=null;
+		try 
+		{
+			con=JdbcConnection.getConnection();
+			PreparedStatement ps=con.prepareStatement("Select customer_id,customer_name,address,salery,city from customer where customer_id=?");
+			ps.setInt(1, customer_id);
+			ResultSet rs=ps.executeQuery();
+			while(rs.next()) 
+			{
+				c=new Customer();
+				c.setCustomer_id(rs.getInt(1));
+				c.setCustomer_name(rs.getString(2));
+				c.setAddress(rs.getString(3));
+				c.setSalery(rs.getFloat(4));
+				c.setCity(rs.getString(5));
+			}
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e);
+		}
+		finally {
+			try {
+				if(con!=null)  
+				{
+					con.close();
+				}
+				System.out.println("closed sucessfully");
+			}
+			catch (Exception e2) {
+				System.out.println(e2);
+			}
+		}
+		
+		
+		return c;
+		}
+
+	@Override
+	public int updateCustomer(Customer customer) {
+		Connection con=null;
+		try 
+		{
+			con=JdbcConnection.getConnection();
+			PreparedStatement ps=con.prepareStatement("update customer set address=?,salery=?,city=? where customer_id=?");
+			ps.setString(1, customer.getAddress());
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e);
+		}
+		finally {
+			try {
+				if(con!=null)  
+				{
+					con.close();
+				}
+				System.out.println("closed sucessfully");
+			}
+			catch (Exception e2) {
+				System.out.println(e2);
+			}
+		}
+		
+		
+		return 0;
+	}
+
+}

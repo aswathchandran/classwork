@@ -1,0 +1,2 @@
+log4j.rootLigger=WARN, CAA
+log4J.appender.CAA-org.apache.log4j.ConsoleAppender

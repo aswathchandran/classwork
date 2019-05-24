@@ -1,0 +1,30 @@
+package com.pack.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+@RequestMapping("\\hello")
+public class HelloWorldController {
+	
+	private String message;
+
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	@RequestMapping(method=RequestMethod.GET)
+	public ModelAndView helloWorld() 
+	{
+		
+		System.out.println("hai");
+		return new ModelAndView("welcome","hello spring framework",message);
+		
+	}
+
+}

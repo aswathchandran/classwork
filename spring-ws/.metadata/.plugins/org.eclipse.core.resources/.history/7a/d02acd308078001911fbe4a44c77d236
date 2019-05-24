@@ -1,0 +1,9 @@
+package com.pack1.required;
+
+public class User {
+
+	private String name;
+	private int age;
+
+
+}

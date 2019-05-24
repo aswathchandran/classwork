@@ -1,0 +1,9 @@
+package com.aswath.model;
+
+public class LoginModel {
+
+	private String username,password;
+
+
+
+}

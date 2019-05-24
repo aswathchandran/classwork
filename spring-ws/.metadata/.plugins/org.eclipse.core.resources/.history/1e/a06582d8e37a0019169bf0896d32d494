@@ -1,0 +1,9 @@
+package com.pack.model;
+
+public class Customer {
+	
+	private String name;
+	
+	
+	
+}

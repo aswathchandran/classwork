@@ -1,0 +1,33 @@
+package com.pack;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="vendor")
+public class Vendor {
+	private int id;
+	private String name;
+	@OneTomany(targetEntity=Student.class,cascade=CascadeType.ALL)
+	private Customer customer;
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
+	
+}

@@ -1,0 +1,30 @@
+package com.aswath.dao;
+
+import java.sql.Connection;
+
+import com.aswath.model.VendorModel;
+
+public class VendorDaoImpl implements VendorDao {
+
+	@Override
+	public int login(VendorModel vendor) {
+		Connection con=null;
+		
+		try 
+		{
+			
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+		}
+		finally 
+		{
+			try 
+			{
+				con.close();
+			}
+		}
+		return 0;
+	}
+
+}

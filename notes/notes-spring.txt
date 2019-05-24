@@ -1,0 +1,72 @@
+Spring lightweight open sourse framework to delvelop web applivcation /application in java platform:
+Spring provide loosly coupling for(IOC) to (DI).
+
+
+
+Goals fo spring framework:
+---------------------------
+
+Spring core 
+Spring context
+Spring AOP
+Spring DAO
+Spring ORM
+Spring webflow
+Spring webMVC
+
+spring core module
+-------------------
+->Fundamental functionality of the spring FRamework with Bean factory interface 	org.springframework.beans.factory.beanfactory.
+->beanfactory is implementatiopn of factory pattern that applies IOC to seprate configuration and depedency 	specfication from actual application core. 
+->XMLbeanFactory class->create and destroys the bean based on the definition contained in XML file.
+
+->Object GetBean(String name) the factoru will instanciate the bean and set the bean prorpety using the 	    dependency 	injection
+
+applicaztion context module
+----------------------------
+->Bean factory makes spring as container 
+->application context makes spring as framework
+->this modules support internationalization, lifecycle, events ,validation, enterperise, services, like email   remoting schuduling JNDI access integrating with EJ, Velocity,FreeMarker frameworks. 
+->Application context interface present in org.springframework.context.*;
+	3classes
+	--------
+	1) ClassPathXmlApplicationContext -> loads the xml file from the classpath
+	2) FileSystemApplicationContect -> loads the xml file present inside the project
+	3) XMLwebApplicationContext -> loads the xml file from WEB-INF
+
+
+Spring AOP
+----------
+->Creates the common functionality that used troughout the application in reusable components
+	eg: transaction,Security,Logging
+
+Spring DAO
+-----------
+->supports spring  api for storing data in database 
+
+Spring ORM
+-----------
+integration of spring with hybernate
+
+Spring webflow
+---------------
+integration of spring with struts
+
+Spring webMVC
+-------------
+->develop a spring application with spring MVC pattern
+
+DI
+--
+	3)Types
+		1)Setter injection->dependencies and property are configured trough Bean setter method.
+		2)Constructor injection->dependencies and property are configured trough Bean constructor using 			constructor-arg tag 
+		3)(doesen't support)interfece injection -> dependencies and property are configured using the bean interface
+
+
+3)programs
+------------
+	1)pojo ->logics
+	2)XML->configuration
+	3)main class->execute 
+

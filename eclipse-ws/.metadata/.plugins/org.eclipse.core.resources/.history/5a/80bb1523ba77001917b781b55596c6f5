@@ -1,0 +1,13 @@
+package com.aswath.service;
+
+import com.aswath.model.VendorModel;
+
+public class LoginServiceImpl implements LoginService {
+
+	@Override
+	public int Login(VendorModel vendor) {
+		
+		return new ;
+	}
+
+}

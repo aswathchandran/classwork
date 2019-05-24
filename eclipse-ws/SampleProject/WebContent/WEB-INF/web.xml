@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>SampleProject</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>  
+  <servlet>
+  <servlet-name>aswa.jsp</servlet-name>
+  <jsp-file>/aswa.jsp</jsp-file>
+  <init-param>
+  <param-name>Striker</param-name>
+  <param-value>Serjio aguero</param-value>
+  </init-param>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>aswa.jsp</servlet-name>
+  <url-pattern>/aswa.jsp</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+  <param-name>Midfielder</param-name>
+  <param-value>Kevin de burne</param-value>
+  </context-param>
+  
+  
+  
+  
+  
+ 
+</web-app>

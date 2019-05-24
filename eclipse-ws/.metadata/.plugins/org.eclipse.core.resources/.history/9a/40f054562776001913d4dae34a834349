@@ -1,0 +1,25 @@
+package com.aswath.model;
+
+public class ProductModel {
+
+
+	private int productid;
+	private String productname;
+	private String category;
+	private String description;
+	private float price;
+	private String image;
+	private String brand;
+	private float rating;
+	
+	
+	
+	public ProductModel() {
+		
+		System.out.println("Default constructor called and object created");
+	}
+	
+
+
+
+}

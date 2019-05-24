@@ -1,0 +1,12 @@
+package com.aswath.service;
+
+import com.aswath.model.LoginModel;
+
+public interface LoginService {
+	
+	
+	
+	public int Login(LoginModel loginModel);
+	
+
+}

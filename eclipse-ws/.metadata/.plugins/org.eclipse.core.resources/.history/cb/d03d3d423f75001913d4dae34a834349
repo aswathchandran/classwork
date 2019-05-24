@@ -1,0 +1,36 @@
+package com.aswath.Dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import com.aswath.JdbcConnection;
+import com.aswath.model.LoginModel;
+
+public class LoginDaoImpl implements LoginDao {
+
+	@Override
+	public int Login(LoginModel loginModel) {
+		
+		
+		
+		Connection con=null;
+		int i=0;
+		try 
+		{
+			con=JdbcConnection.getConnection();
+			PreparedStatement ps= con.prepareStatement("select * from admin where username=? and password=?" );
+			ps.setString(1, loginModel.getUsername());
+			ResultSet rs=ps.executeQuery();
+			
+			i=rs.next();
+		}
+		catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		return 0;
+	}
+
+}

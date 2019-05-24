@@ -1,0 +1,8 @@
+package com.pack;
+
+public class RegularEmployee extends Employee {
+	private float salery;
+	private int bonus;
+	
+
+}

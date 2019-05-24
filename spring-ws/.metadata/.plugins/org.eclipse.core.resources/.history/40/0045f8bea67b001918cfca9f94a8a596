@@ -1,0 +1,12 @@
+package com.pack.model;
+
+public class Customer {
+	
+	
+	private int custid;
+	private String name;
+	private String address;
+	private int age;
+	private float salery;
+
+}

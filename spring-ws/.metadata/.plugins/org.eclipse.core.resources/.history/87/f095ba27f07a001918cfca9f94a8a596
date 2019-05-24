@@ -1,0 +1,32 @@
+package com.pack.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.pack.model.Customer;
+
+@Controller
+
+public class CustomerController {
+
+	
+	
+	
+	@RequestMapping(value="/cust/save",method=RequestMethod.GET)
+	public String saveCustomerPage(ModelMap model) 
+	{
+		model.addAttribute("customer",new Customer());
+		return "custsave";
+	}
+	
+	
+	@RequestMapping(value="/cust/save.do",method=RequestMethod.POST)
+	public String saveCustomerAaction(Model model) 
+	{
+		System.out.println("entered");
+		return "custSaveSuccess";
+	}
+}

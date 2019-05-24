@@ -1,0 +1,42 @@
+package com.pack;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.type.descriptor.sql.VarbinaryTypeDescriptor;
+
+public class Main {
+
+	public static void main(String[] args) {
+		SessionFactory factory=HibernateUtil.getSessionFactory();
+		Session session=factory.openSession();
+		Transaction transaction=session.beginTransaction();
+		transaction.begin();
+		Vendor vendor=new Vendor();
+		vendor.setId(100);
+		vendor.setName("bhanu");
+		
+		Customer customer=new Customer();
+		customer.setCustid(12);
+		customer.setName("nila");
+		
+		Customer customer2=new Customer();
+		customer2.setCustid(12);
+		customer2.setName("prakash");
+		
+		Set s1=new HashSet();
+		s1.add(customer);
+		s1.add(customer2);
+		vendor.setCustomer(s1);
+		
+		session.persist(vendor);
+		transaction.commit();
+		session.close();
+		
+
+	}
+
+}

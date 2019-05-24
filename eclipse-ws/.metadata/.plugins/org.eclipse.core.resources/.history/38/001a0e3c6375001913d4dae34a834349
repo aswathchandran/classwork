@@ -1,0 +1,13 @@
+package com.aswath.service;
+
+import com.aswath.Dao.LoginDaoImpl;
+import com.aswath.model.LoginModel;
+
+public  class LoginServiceImpl implements LoginService {
+
+	@Override
+	public int Login(LoginModel loginModel) {
+		return new LoginDaoImpl().Login(loginModel);
+	}
+
+}

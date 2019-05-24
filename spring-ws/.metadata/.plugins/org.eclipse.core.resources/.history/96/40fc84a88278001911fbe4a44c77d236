@@ -1,0 +1,26 @@
+package com.pack2.quallifier;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class Sample {
+	@Autowired
+	private User user;
+	
+	public Sample() {
+		System.out.println("Sample default");
+	}
+	
+	public void display() 
+	{
+		System.out.println(user.getName());
+	}
+	
+	public void display1() 
+	{
+		System.out.println(user.getAge());
+	}
+
+
+
+
+}

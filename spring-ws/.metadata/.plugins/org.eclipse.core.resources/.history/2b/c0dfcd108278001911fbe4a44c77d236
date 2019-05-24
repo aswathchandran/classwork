@@ -1,0 +1,15 @@
+package com.pack2.quallifier;
+
+public class Sample {
+
+	private User user;
+	
+	public Sample() {
+		System.out.println("Sample default");
+	}
+	
+
+
+
+
+}

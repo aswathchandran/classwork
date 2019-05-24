@@ -1,0 +1,9 @@
+package com.aswath.model;
+
+public class VendorListModel {
+	
+	
+	private int productid;
+	private int quantity;
+
+}

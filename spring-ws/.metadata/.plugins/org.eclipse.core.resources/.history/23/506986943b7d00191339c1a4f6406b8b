@@ -1,0 +1,13 @@
+label.customerId=Customer ID
+label.customername=Customer Name
+label.address=Address
+label.age=Age
+label.salery=Salery
+label.addcustomer=Add Customer
+label.editCustomer=Edit Customer
+
+Size.customer.name= Customer {0} should be between {2} and {1} characters long
+size.customer.address=Customer {0} should be between {2} and {1} characters long
+NotNull=this is a required filed
+NotEmpty=this is a required field
+NotNull.customer.age=Customer {0} should be in years

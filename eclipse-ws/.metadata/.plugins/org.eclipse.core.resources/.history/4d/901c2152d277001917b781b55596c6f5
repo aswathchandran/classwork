@@ -1,0 +1,134 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";}
+        
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");}
+
+document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";}
+
+</script>
+<style>
+	.inp
+	{
+		border-radius: 25px;
+	}
+	.container1
+	{
+		margin-top:0px;
+		margin-left:10%;
+		
+ 	}
+ 	.lgn_btn
+	{
+		margin-rignt:30%;
+		border-radius: 25px;
+		background:#bdc3c7;
+	}	
+	h4
+	{
+		color: black;
+	}
+ 	.tab 
+ 	{
+ 		overflow: hidden; border: 1px solid #ccc; 
+		background-color: #f1f1f1;
+	}
+
+	.tabcontent 
+	{
+		display: none; padding: 6px 12px; border: 1px solid #ccc;
+    	border-top: none;
+    }
+    
+	.tab button 
+	{
+		background-color: inherit; float: left; border: none;
+    	outline: none; cursor: pointer; padding: 14px 16px; 
+    	transition: 0.3s;
+    }
+    
+	.tab button:hover 
+	{
+		background-color: #ddd;
+	}
+
+	.tab .active
+	 {
+	 	background-color: #ccc;
+	 }
+
+	.tabcontent 
+	{
+		display: none; 
+		padding: 6px 12px;
+	
+		border: 1px solid #ccc; 
+		border-top: none;
+	}
+
+	table 
+	{
+		font-family: arial, sans-serif; 
+		border-collapse: collapse;
+    	width: 100%;
+    }
+
+	td, th
+	{
+		border: 1px solid ; padding: 8px; 
+    	text-align: center;
+    }
+
+	/*Change color to gray*/
+	tr:nth-child(even) {
+    	background-color: ;
+    }
+
+	.actived a{color:green}
+	.actived a:hover{ font-weight: bold}
+
+	.deactivated a{color:red}
+	.deactivated a:hover{ font-weight: bold}
+
+	.available {color:green; }
+	.disable{ color: red; font-weight: bold}
+	.intraining{color: blue; font-weight: bold}
+	.vacation{ font-weight: bold}
+	
+	
+	
+	
+	
+</style>
+
+
+</head>
+<body>
+<div class="col-sm-9 col-md-6 col-lg-9 " style="background-color:white; margin-to: 3%;">
+	<div class="">
+		<div class="tab">
+			<button class="tablinks" onclick="openCity(event, 'Products')">PRODUCTS</button>
+			<button class="tablinks" onclick="openCity(event, 'Vendor')">VENDOR</button>
+		</div>
+	</div>
+	<div id="Products" class="tabcontent">
+		worked
+	</div>
+</div>
+
+</body>
+</html>

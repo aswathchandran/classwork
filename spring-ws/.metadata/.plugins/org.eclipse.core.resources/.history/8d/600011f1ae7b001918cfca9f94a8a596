@@ -1,0 +1,13 @@
+package com.pack.service;
+
+import com.pack.dao.CustomerDaoImpl;
+import com.pack.model.Customer;
+
+public class CustomerServiceImpl implements CustomerService {
+
+	public int insertCustomer(Customer customer) {
+		
+		return new CustomerDaoImpl().insertCustomer(customer);
+	}
+
+}

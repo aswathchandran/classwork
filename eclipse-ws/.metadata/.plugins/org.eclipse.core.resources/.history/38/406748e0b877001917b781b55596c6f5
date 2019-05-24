@@ -1,0 +1,11 @@
+package com.aswath.model;
+
+public class VendorModel {
+	
+	
+	private int id;
+	private String username;
+	private String Contact;
+	Private String Address;
+
+}

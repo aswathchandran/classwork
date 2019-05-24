@@ -1,0 +1,10 @@
+package com.aswath.service;
+
+public interface LoginService {
+	
+	
+	
+	
+	
+
+}

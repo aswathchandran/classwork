@@ -1,0 +1,140 @@
+package com.aswath.Dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.aswath.JdbcConnection;
+import com.aswath.model.ProductModel;
+
+public class ProductDaoImpl implements ProductDao {
+
+	@Override
+	public List<ProductModel> fetchAllProduct() {
+		Connection con=null;
+		List<ProductModel>productList=new ArrayList<ProductModel>();
+		try 
+		{
+			con=JdbcConnection.getConnection();
+			Statement st=con.createStatement();
+			ResultSet rs=st.executeQuery("Select productid,productname,category,description,price,image,brand,rating from products");
+			
+			while(rs.next()) 
+			{
+				System.out.println(rs.getInt(1));
+				ProductModel productTemp=new ProductModel();
+				productTemp.setProductid(rs.getInt(1));
+				productTemp.setProductname(rs.getString(2));
+				productTemp.setCategory(rs.getString(3));
+				productTemp.setDescription(rs.getString(4));
+				productTemp.setPrice(rs.getFloat(5));
+				productTemp.setBrand(rs.getString(7));
+				productTemp.setRating(rs.getFloat(8));
+				productTemp.setImage(rs.getString(6));
+				productList.add(productTemp);
+			}			
+		}
+		catch (Exception e) {
+			System.out.println("==>asa>"+e);
+		}
+		finally {
+			try 
+			{
+				con.close();
+			}
+			catch (Exception e) {
+				System.out.println(e);
+			}
+			
+		}
+		
+		
+		
+		return productList;
+	}
+
+	@Override
+	public int insertNewProduct(ProductModel product) {
+		
+		Connection con=null;
+		int i=0;
+		try 
+		{
+			con=JdbcConnection.getConnection();
+			PreparedStatement ps=con.prepareStatement("insert into products(productname,category,description,price,image,brand,rating) values (?,?,?,?,?,?,?)");
+			ps.setString(1, product.getProductname());
+			ps.setString(2, product.getCategory());
+			ps.setString(3, product.getDescription());
+			ps.setFloat(4, product.getPrice());
+			ps.setString(5,product.getImage());
+			ps.setString(6, product.getBrand());
+			ps.setFloat(7, product.getRating());
+			i=ps.executeUpdate();
+				
+		}
+		catch (Exception e) 
+		{
+			System.out.println(e);
+		}
+		finally
+		{
+			try 
+			{
+				con.close();
+			}
+			catch (Exception e) {
+				System.out.println(e);
+			}			
+		}
+		return i;
+	}
+
+	@Override
+	public ProductModel getProduct(String productname) 
+	{
+		Connection con=null;
+		ProductModel product=null;
+		try 
+		{
+			con=JdbcConnection.getConnection();
+			Statement st=con.createStatement();
+			PreparedStatement ps=con.prepareStatement("Select prodcutid,productname,category,description,price,brand,rating,image where productname=?");
+			ps.setString(1, productname);
+			ResultSet rs=ps.executeQuery();
+			while(rs.next()) 
+			{
+				product=new ProductModel();
+				product.setProductid(rs.getInt(1));
+				product.setProductname(rs.getString(2));
+				product.setCategory(rs.getString(3));
+				product.setDescription(rs.getString(4));
+				product.setPrice(rs.getFloat(5));
+				product.setBrand(rs.getString(6));
+				product.setRating(rs.getFloat(7));
+				product.setImage(rs.getString(8));
+				
+			}
+			
+		}
+		catch (Exception e) {
+			System.out.println(e);
+		}
+		finally {
+			
+			try 
+			{
+				System.out.println(e);
+			}
+			catch (Exception e) {
+				System.out.println(e);
+			}
+			
+		}
+			
+		return product;
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.aswath.service;
+
+import com.aswath.model.LoginModel;
+
+public class LoginServiceImpl implements LoginService {
+
+	@Override
+	public int Login(LoginModel loginModel) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

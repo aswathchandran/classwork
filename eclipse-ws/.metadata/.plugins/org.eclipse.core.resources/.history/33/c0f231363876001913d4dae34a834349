@@ -1,0 +1,99 @@
+@charset "ISO-8859-1";
+#custom-search-input {
+        margin:0;
+        padding: 0;
+    }
+ 
+    #custom-search-input .search-query {
+        padding-right: 3px;
+        padding-right: 4px \9;
+        padding-left: 3px;
+        padding-left: 4px \9;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+ 
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 25px;
+    }
+ 
+    #custom-search-input button {
+        border: 0;
+        background: none;
+        /** belows styles are working good */
+        padding: 2px 5px;
+        margin-top: 2px;
+        position: relative;
+        left: -28px;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 25px;
+        color:#D9230F;
+    }
+ 
+    .search-query:focus + button {
+        z-index: 3;   
+    }
+   	
+   	
+   	
+   		.inp
+	{
+		border-radius: 25px;
+	}
+	.container1
+	{
+		margin-top:0px;
+		margin-left:10%;
+		
+ 	}
+ 	.lgn_btn
+	{
+		margin-rignt:30%;
+		border-radius: 25px;
+		background:#bdc3c7;
+	}	
+	h4
+	{
+		color: black;
+	}
+ 	.tab {overflow: hidden; border: 1px solid #ccc; 
+background-color: #f1f1f1;}
+
+.tabcontent {display: none; padding: 6px 12px; border: 1px solid #ccc;
+    border-top: none;}
+    
+.tab button {background-color: inherit; float: left; border: none;
+    outline: none; cursor: pointer; padding: 14px 16px; 
+    transition: 0.3s;}
+    
+.tab button:hover {background-color: #ddd;}
+
+.tab .active {background-color: #ccc;}
+
+.tabcontent {display: none; padding: 6px 12px;
+
+border: 1px solid #ccc; border-top: none;}
+
+table {font-family: arial, sans-serif; border-collapse: collapse;
+    width: 100%;}
+
+td, th {border: 1px solid #dddddd; padding: 8px; 
+    text-align: center;}
+
+/*Change color to gray*/
+tr:nth-child(even) {
+    background-color: #dddddd;}
+
+.actived a{color:green}
+.actived a:hover{ font-weight: bold}
+
+.deactivated a{color:red}
+.deactivated a:hover{ font-weight: bold}
+
+.available {color:green; }
+.disable{ color: red; font-weight: bold}
+.intraining{color: blue; font-weight: bold}
+.vacation{ font-weight: bold}

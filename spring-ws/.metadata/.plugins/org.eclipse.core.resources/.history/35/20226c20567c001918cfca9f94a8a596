@@ -1,0 +1,40 @@
+package com.pack;
+
+
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="emp502")
+@AttributeOverrides(
+		{
+			@AttributeOverride(name="id",column=@Column(name="id")),
+			@AttributeOverride(name="name",column=@Column(name="name")),
+		}
+		
+		)
+public class RegularEmployee extends Employee {
+	private float salery;
+	private int bonus;
+	
+	
+	public float getSalery() {
+		return salery;
+	}
+	public void setSalery(float salery) {
+		this.salery = salery;
+	}
+	public int getBonus() {
+		return bonus;
+	}
+	public void setBonus(int bonus) {
+		this.bonus = bonus;
+	}
+	
+	
+	
+
+}

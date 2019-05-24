@@ -1,0 +1,15 @@
+package com.aswath.model;
+
+public class UserModel {
+
+	private int userid;
+	private String username;
+	private String destignition;
+	private String office;
+	private String imagesrc;
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,11 @@
+package com.pack.form;
+
+public class Customer {
+
+	private Integer id;
+	private String name;
+	private String address;
+	private Integer age;
+	private Double salery;
+
+}

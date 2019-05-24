@@ -1,0 +1,11 @@
+INDEX VERSION 1.4+C:\Users\765697\Desktop\aswath-ws\eclipse-ws\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+673566462.index
+3402855095.index
+337340371.index
+3606189516.index
+422028438.index
+1658264207.index
+2005693976.index
+2021897924.index
+422028438.index
+3922062443.index

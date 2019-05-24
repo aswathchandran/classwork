@@ -1,0 +1,11 @@
+package com.aswath.service;
+
+import com.aswath.model.VendorModel;
+
+public interface VendorService {
+	
+	
+	
+	public int LoginService(VendorModel vendor);
+
+}

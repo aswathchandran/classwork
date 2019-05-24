@@ -1,0 +1,9 @@
+package com.aswath.dao;
+
+import com.aswath.model.VendorModel;
+
+public interface VendorDao {
+	
+	public int Login(VendorModel vendor);
+
+}

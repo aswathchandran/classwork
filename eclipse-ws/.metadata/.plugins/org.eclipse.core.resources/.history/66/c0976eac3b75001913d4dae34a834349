@@ -1,0 +1,6 @@
+package com.aswath.model;
+
+public class Snippet {
+	rintWriter pw=response.getWriter();
+}
+

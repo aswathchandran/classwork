@@ -1,0 +1,10 @@
+package com.pack;
+
+public class FirstBean {
+	
+	
+		private SecondBean secondBean;
+		private String name;
+		
+
+}
